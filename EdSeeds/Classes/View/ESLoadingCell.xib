@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Italic.otf">
+            <string>Quicksand-Italic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ESLoadingCell" rowHeight="60" id="nbT-qf-Fdy" customClass="ESLoadingCell" customModule="EdSeeds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbT-qf-Fdy" id="Cki-Z7-OSl">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wY-jh-ZBE">
+                        <rect key="frame" x="155.5" y="21" width="84.5" height="17"/>
+                        <fontDescription key="fontDescription" name="Quicksand-Italic" family="Quicksand" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OrP-hb-V1y">
+                        <rect key="frame" x="126.5" y="19" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OrP-hb-V1y" firstAttribute="centerY" secondItem="5wY-jh-ZBE" secondAttribute="centerY" id="Kh1-ad-NMi"/>
+                    <constraint firstItem="5wY-jh-ZBE" firstAttribute="centerX" secondItem="Cki-Z7-OSl" secondAttribute="centerX" multiplier="1.05" id="S3x-zP-fo0"/>
+                    <constraint firstItem="5wY-jh-ZBE" firstAttribute="leading" secondItem="OrP-hb-V1y" secondAttribute="trailing" constant="8.5" id="fbM-cv-qxc"/>
+                    <constraint firstItem="5wY-jh-ZBE" firstAttribute="centerY" secondItem="Cki-Z7-OSl" secondAttribute="centerY" id="kpy-P1-ctq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="indicatorLoading" destination="OrP-hb-V1y" id="K9e-sv-YbG"/>
+                <outlet property="lblTitle" destination="5wY-jh-ZBE" id="Dza-Zt-wpZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
